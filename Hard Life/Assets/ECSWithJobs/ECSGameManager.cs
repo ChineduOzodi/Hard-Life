@@ -33,7 +33,7 @@ namespace ECSWithJob {
                     float randomValue = UnityEngine.Random.Range(.1f, 1f);
                     manager.SetComponentData(entities[(x + width) * height * 2 + y + height], new Position { Value = new float3(x, 0, y) });
                     manager.SetComponentData(entities[(x + width) * height * 2 + y + height], new Scale { Value = new float3(1, 1, 1) });
-                    manager.SetComponentData(entities[(x + width) * height * 2 + y + height], new GrowthSpeed { Value = growthSpeed});
+                    manager.SetComponentData(entities[(x + width) * height * 2 + y + height], new GrowthSpeed { Value = randomValue});
                 }
             }
 

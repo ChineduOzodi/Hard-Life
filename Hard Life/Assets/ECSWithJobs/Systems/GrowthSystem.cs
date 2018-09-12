@@ -20,9 +20,13 @@ namespace ECSWithJob
             {
                 float3 value = scale.Value;
 
-                value += deltaTime * growthSpeed.Value * new float3(0, 1, 0);
+                float3 growth = deltaTime * growthSpeed.Value * new float3(0, 1, 0);
+
+                value += growth;
 
                 scale.Value = value;
+
+                pos.Value += growth * .5f;
             }
         }
 
