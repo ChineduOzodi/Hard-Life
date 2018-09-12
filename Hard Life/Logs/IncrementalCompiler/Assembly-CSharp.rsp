@@ -2,9 +2,29 @@
 -target:library
 -nowarn:0169
 -langversion:7
--out:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Temp/Assembly-CSharp.dll"
+-out:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Temp/Assembly-CSharp.dll"
 -nostdlib
 -unsafe
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.Properties.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Properties.Codegen.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Jobs.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Jobs.Editor.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.Editor.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Properties.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Collections.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Burst.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Properties.Editor.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Mathematics.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Transforms.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Burst.Editor.dll"
+-r:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -67,35 +87,15 @@
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\Managed/UnityEditor.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\Managed/Unity.Locator.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.Properties.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Properties.Codegen.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Jobs.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Jobs.Editor.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.Editor.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Properties.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Collections.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Burst.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Properties.Editor.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Mathematics.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Entities.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Transforms.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Burst.Editor.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
--r:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.7f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.7f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.7f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.7f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.7f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.2.7f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
--r:C:/Users/chin2/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
--r:C:/Users/chin2/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.collections@0.0.9-preview.4/System.Runtime.CompilerServices.Unsafe.dll
--r:C:/Users/chin2/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
+-r:C:/Users/chinedu/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
+-r:C:/Users/chinedu/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.collections@0.0.9-preview.4/System.Runtime.CompilerServices.Unsafe.dll
+-r:C:/Users/chinedu/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.2.7f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.Core.dll"
@@ -308,6 +308,10 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Assets/_Game/GameManager.cs"
--i:"C:/Users/chin2/Documents/Hard-Life/Hard Life/Assets/HybridECS/Rotator.cs"
+-i:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Assets/ECSWithJobs/ECSGameManager.cs"
+-i:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Assets/ECSWithJobs/GrowthSpeedComponent.cs"
+-i:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Assets/ECSWithJobs/Systems/GrowthSystem.cs"
+-i:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Assets/HybridECS/Rotator.cs"
+-i:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Assets/HybridECSWithJobs/GameManager.cs"
+-i:"C:/Users/chinedu/Documents/Hard-Life/Hard Life/Assets/HybridECSWithJobs/Systems/GrowthJob.cs"
 -v:0
