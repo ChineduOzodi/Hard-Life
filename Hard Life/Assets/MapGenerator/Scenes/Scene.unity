@@ -319,7 +319,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 522957207}
-  m_Mesh: {fileID: 1083003623}
+  m_Mesh: {fileID: 1141443366}
 --- !u!4 &522957210
 Transform:
   m_ObjectHideFlags: 0
@@ -436,10 +436,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4300166f57232c47851d132f0d8eb12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 100
-  height: 100
-  numberOfTrees: 250
-  treeSpawnHeight: {x: 3, y: 100}
+  width: 5000
+  height: 5000
+  numberOfTrees: 25000
+  treeSpawnHeight: {x: 30, y: 100}
   growthSpeed: {x: 0.001, y: 0.1}
   obj: {fileID: 1531075632177534, guid: afc5f577dd3ea8a4298c9c44c5f0e85e, type: 2}
   tg: {fileID: 1008436976}
@@ -556,6 +556,10 @@ MonoBehaviour:
     visibleDstThreshold: 200
   - lod: 2
     visibleDstThreshold: 400
+  - lod: 4
+    visibleDstThreshold: 1000
+  - lod: 4
+    visibleDstThreshold: 5000
   meshSettings: {fileID: 11400000, guid: 46ff57af49f874fe2bd2a350a99d063c, type: 2}
   heightMapSettings: {fileID: 11400000, guid: 740a13ca91e454c51aeb1f625a396eca, type: 2}
   textureSettings: {fileID: 11400000, guid: addd6b0c4581e4f73b0395a4943b9f57, type: 2}
@@ -572,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60765b39c6679414382a47b20bd4a882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!43 &1083003623
+--- !u!43 &1141443366
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

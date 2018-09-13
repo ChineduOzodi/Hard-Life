@@ -25,52 +25,49 @@ public class TreeGenerator : MonoBehaviour {
         manager = World.Active.GetOrCreateManager<EntityManager>();
 
         //Set available positions
-        List<Vector2> availablePositions = new List<Vector2>();
-
-        for (int y = -height; y < height; y++)
-        {
-            for (int x = -width; x < width; x++)
-            {
-                availablePositions.Add(new Vector2(x, y));
-            }
-        }
-
-        
-
-
-        
-
-        //get terrain settings
-        HeightMap hm = HeightMapGenerator.GenerateHeightMap(width * 2, height * 2, tg.heightMapSettings, Vector2.zero);
-
-        //Remove all locations that are two high or low
-        for (int i = availablePositions.Count - 1; i >= 0; i--)
-        {
-            Vector2 pos = availablePositions[i];
-            float height = hm.values[(int)pos.x + width, (int) pos.y + this.height];
-            if (height < treeSpawnHeight.x || height > treeSpawnHeight.y)
-            {
-                availablePositions.Remove(pos);
-            }
-        }
-
-        //adjust treeCount if needed
-        if (availablePositions.Count < numberOfTrees)
-            numberOfTrees = availablePositions.Count;
+        HashSet<Vector2> takenPositions = new HashSet<Vector2>();
 
         NativeArray<Entity> entities = new NativeArray<Entity>(numberOfTrees, Allocator.Temp);
         manager.Instantiate(obj, entities);
 
         for (int i = 0; i < numberOfTrees; i++)
         {
-            float randomGrowthSpeed = UnityEngine.Random.Range(growthSpeed.x, growthSpeed.y);
-            int randomPosIndex = UnityEngine.Random.Range(0, availablePositions.Count);
-            Vector2 randomPos = availablePositions[randomPosIndex];
+            int randomHeight;
+            int randomWidth;
+            Vector2 randomPos;
+            HeightMap hm;
+            float height;
+            int maxIter = 1000;
 
-            manager.SetComponentData(entities[i], new Position { Value = new float3(randomPos.x, hm.values[(int) randomPos.x + width,(int) randomPos.y + height], -randomPos.y) });
+            do
+            {
+                maxIter--;
+                randomHeight = UnityEngine.Random.Range(-this.height, this.height);
+                randomWidth = UnityEngine.Random.Range(-width, width);
+                randomPos = new Vector2(randomWidth, randomHeight);
+                //get terrain settings
+                hm = HeightMapGenerator.GenerateHeightMap(1, 1, tg.heightMapSettings, randomPos);
+                height = hm.values[0, 0];
+
+                //Check for collisions and height settings
+                if (takenPositions.Contains(randomPos) ||
+                    height < treeSpawnHeight.x ||
+                    height > treeSpawnHeight.y
+                    )
+                {
+                    continue;
+                }
+                break;
+            }
+            while (maxIter > 0);
+
+
+            float randomGrowthSpeed = UnityEngine.Random.Range(growthSpeed.x, growthSpeed.y);
+
+            manager.SetComponentData(entities[i], new Position { Value = new float3(randomPos.x, height, randomPos.y) });
             manager.SetComponentData(entities[i], new Scale { Value = new float3(1, 1, 1) });
             manager.SetComponentData(entities[i], new ECSWithJob.GrowthSpeed { Value = randomGrowthSpeed });
-            availablePositions.Remove(randomPos);
+            takenPositions.Add(randomPos);
         }
 
         entities.Dispose();
